@@ -20,5 +20,8 @@ class Item(models.Model):
     target = models.CharField(max_length=255)
     player = models.ForeignKey(Player, related_name="items")
 
+    class Meta:
+        ordering = ['-id']
+
     def __str__(self):
         return "{0}'s {1}".format(self.player.name, self.target)

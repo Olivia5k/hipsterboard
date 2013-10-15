@@ -22,7 +22,8 @@ $(document).ready(function(e) {
                         return;
                     }
 
-                    player.find('.items').append(n);
+                    n.hide();
+                    player.find('.items').prepend(n);
                     player.find('.score').text(json.count);
                     n.slideDown();
                 }
